@@ -44,24 +44,19 @@ test('powerset of arr using recursion', () => {
 })
 
 test('transformation function should return sum of sums', () => {
-    var addReducer = (x, y) => x + y;
+    const sum = (arr) => arr.reduce((a, b) => a + b)
     var _ = {
-        sum: (arr) => arr.reduce(addReducer),
-        add: (arr) => arr.reduce(addReducer),
+        add: (a, b) => a + b,
     }
-    var sumOfSums = useOn(_.add, _.sum)
-    expect(sumOfSums(input.q3.arr1, input.q3.arr2)).toBe(660)
+    expect(useOn(_.add, sum)(input.q3.arr1, input.q3.arr2)).toBe(660)
 })
 
 test('transformation function should return product of sums', () => {
-    var addReducer = (x, y) => x + y;
-    var multiplyReducer = (x, y) => x * y
+    const sum = (arr) => arr.reduce((a, b) => a + b)
     var _ = {
-        sum: (arr) => arr.reduce(addReducer),
-        multiply: (arr) => arr.reduce(multiplyReducer)
+        multiply: (a, b) => a * b,
     }
-    var productOfSums = useOn(_.multiply, _.sum)
-    expect(productOfSums(input.q3.arr1, input.q3.arr2)).toBe(36000)
+    expect(useOn(_.multiply, sum)(input.q3.arr1, input.q3.arr2)).toBe(36000)
 })
 
 test('myreduce should return sum of the list using loop', () => {

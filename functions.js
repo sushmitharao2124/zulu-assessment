@@ -60,7 +60,7 @@ const useOn = (f1, f2) => {
     return (arrOne, arrTwo) => {
         var val1 = f2(arrOne)
         var val2 = f2(arrTwo)
-        return f1([val1, val2])
+        return [val1, val2].reduce(f1)
     }
 }
 
