@@ -11,13 +11,14 @@ const getFiboOddSum = (n) => {
     prev = 0
     cur = 1
     s = 0
-    while (cur <= n) {
+    while (cur < n) {
+        if (cur % 2) {
+            s += cur
+        }
         temp = cur
         cur = prev + temp
         prev = temp
-        if (cur % 2 == 0) {
-            s += cur
-        }
+
     }
     return s
 }

@@ -14,7 +14,7 @@ const {
 } = functions
 
 test('test fibonacci odd sum', () => {
-    expect(getFiboOddSum(input.q1)).toBe(188)
+    expect(getFiboOddSum(input.q1)).toBe(5)
 })
 
 test('powerset of arr using loops', () => {

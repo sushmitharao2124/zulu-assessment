@@ -1,4 +1,4 @@
-const q1 = 100;
+const q1 = 5;
 const q2 = [1, 2, 3]
 const q3 = {
     arr1: [10, 20, 30],
